@@ -1,7 +1,5 @@
 # Cinapp
 
-# Vetero
-
 Vetero helps you to enjoy your favourite movies.
 
 ## General info
