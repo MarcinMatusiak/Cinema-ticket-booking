@@ -1,6 +1,6 @@
 # Cinapp
 
-Vetero helps you to enjoy your favourite movies.
+Cinapp helps you to enjoy your favourite movies.
 
 ## General info
 
