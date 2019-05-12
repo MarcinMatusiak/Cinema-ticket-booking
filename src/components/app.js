@@ -8,7 +8,7 @@ class App extends React.Component {
 
 	async componentDidMount() {
 		const response = await themoviedb.get(
-			'/movie/popular?api_key=90c5cb06ac52c1395de20502caaa6a51&language=en-US&page=2&region=pl',
+			'/movie/popular?api_key=90c5cb06ac52c1395de20502caaa6a51&language=en-US&page=3&region=pl',
 			// to mozna zmienic za pomoca INTERCEPTORS
 			{}
 		);

@@ -1,0 +1,50 @@
+:root {
+    --main-bg-color: #06306e;
+}
+
+body {
+    background-color: var(--main-bg-color);
+}
+
+.movie {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.movie-details {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 99.2%;
+    background-color: #111;
+    color: whitesmoke;
+    opacity: 0;
+    padding: 20px;
+    transition: opacity 0.25s ease-out;
+}
+
+.movie-details:hover {
+    opacity: 0.95;
+}
+
+.movie-details h2 {
+    text-align: center;
+    padding: 3rem;
+    color: goldenrod;
+    font-size: 2.2rem;
+}
+
+.movies-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 30px;
+}
+
+.movies-list img {
+    max-width: 100%;
+    min-width: 200px;
+    box-shadow: 5px 5px 10px rgba(2, 4, 41, 0.651);
+}
+
