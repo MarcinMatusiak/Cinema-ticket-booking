@@ -3,13 +3,12 @@ import React from 'react';
 class SearchBar extends React.Component {
 	render() {
 		return (
-			<div className="ui segment">
-				<form className="ui form">
-					<div className="field">
-						<label> Movie Search </label>
-						<input type="text" />
-					</div>
-				</form>
+			<div className="ui category search">
+				<div className="ui icon input">
+					<input className="prompt" type="text" placeholder="Znajdź film..." />
+					<i className="search icon" />
+				</div>
+				<div className="results" />
 			</div>
 		);
 	}
