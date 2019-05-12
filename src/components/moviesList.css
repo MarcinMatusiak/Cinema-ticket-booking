@@ -31,7 +31,8 @@ body {
 
 .movie-details h2 {
     text-align: center;
-    padding: 3rem;
+    padding-top: 3rem;
+    padding-bottom: 2rem;
     color: goldenrod;
     font-size: 2.2rem;
 }
