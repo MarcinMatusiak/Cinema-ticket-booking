@@ -72,7 +72,7 @@ router.delete("/deleteCustomer", (req, res) => {
 });
 
 // run server
-const port = process.env.PORT || 3000; //default port
+const port = process.env.PORT || 3001; //default port
 app.listen(port, () => {
     console.log(`Listening on port ${port}`)
 });
