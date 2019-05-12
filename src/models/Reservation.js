@@ -1,27 +1,56 @@
-import { isEmail, isMobilePhone } from 'validator';
-const mongoose = require();
+const validate = require ('mongoose-validator');
+const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
+
+const nameValidator = [
+    validate({
+        validator: 'isLength',
+        arguments: [2,30],
+        message: 'Name should be between {ARGS[0]} and {ARGS[1]} characters',
+        httpStatus: 400
+    }),
+    validate({
+        validator: 'isAlphanumeric',
+        passIfEmpty: true,
+        message: 'Name should contain alpha-numeric characters only',
+        httpStatus: 400,
+    })
+];
+
+const emailValidator = [
+    validate({
+        validator: 'isEmail',
+        message: 'Invalid email adress has been passed'
+    })
+];
+
+const mobilePhoneValidato = [
+    validate({
+        validator: 'isMobilePhone',
+        message: 'Invalid mobile phone number has been passed'
+    })
+];
 
 const CustomerSchema = new Schema({
     firstName: {
         type: String,
-        min: [2, 'First name should have at least 2 characters'],
-        required: true
+        required: true,
+        validate: nameValidator
     },
     lastName: {
       type: String,
-      min: [2, 'Last name should have at least 2 characters'],
-      required: true
+      required: true,
+      validate: nameValidator
     },
     email: {
         type: String,
         required: true,
-        validate: [isEmail, 'Invalid email']
+        validate: emailValidator
     },
     mobile: {
         type: Number,
         required: true,
-        validate: [isMobilePhone, 'Invalid mobile']
+        validate: mobilePhoneValidato
     }
 });
 
