@@ -1,0 +1,5 @@
+{
+    "presents": ["es2015", "stage-0"]
+}
+
+//allows us to use ES6 in React apps
