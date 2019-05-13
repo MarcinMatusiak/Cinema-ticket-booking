@@ -6,6 +6,31 @@ body {
     background-color: var(--main-bg-color);
 }
 
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+header {
+    padding: 20px;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    letter-spacing: 3px;
+}
+
+header i {
+    margin: 20px;
+}
+
+header h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 5rem;
+    color: goldenrod;
+    text-shadow: 2px 2px 5px rgba(2, 4, 41, 0.699);
+}
+
 .movie {
     position: relative;
     width: 100%;
