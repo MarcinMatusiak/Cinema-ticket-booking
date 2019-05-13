@@ -1,7 +1,8 @@
 import React from 'react';
 import themoviedb from '../api/themoviedb';
-import SearchBar from './SearchBar';
+import Header from './header';
 import MoviesList from './moviesList';
+import './style.css';
 
 class App extends React.Component {
 	state = { movies: [] };
@@ -18,8 +19,8 @@ class App extends React.Component {
 
 	render() {
 		return (
-			<div className="ui container">
-				<SearchBar />
+			<div className="container">
+				<Header />
 				<MoviesList movies={this.state.movies} />
 			</div>
 		);
