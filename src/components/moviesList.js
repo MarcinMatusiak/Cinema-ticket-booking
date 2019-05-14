@@ -1,4 +1,5 @@
 import React from 'react';
+import ModalOnScreen from './ModalOnScreen';
 
 const MoviesList = (props) => {
 	const movies = props.movies.map((movie) => {
@@ -9,6 +10,7 @@ const MoviesList = (props) => {
 				<div className="movie-details">
 					<h2>{movie.title}</h2>
 					<p>{movie.overview}</p>
+					<div><ModalOnScreen></ModalOnScreen></div>
 				</div>
 			</div>
 		);
