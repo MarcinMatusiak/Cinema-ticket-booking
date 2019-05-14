@@ -24,7 +24,7 @@ const emailValidator = [
     })
 ];
 
-const mobilePhoneValidato = [
+const mobilePhoneValidator = [
     validate({
         validator: 'isMobilePhone',
         message: 'Invalid mobile phone number has been passed'
@@ -48,15 +48,15 @@ const CustomerSchema = new Schema({
         validate: emailValidator
     },
     mobile: {
-        type: Number,
+        type: String,
         required: true,
-        validate: mobilePhoneValidato
+        validate: mobilePhoneValidator
     }
 });
 
-const CustomerModel = mongoose.model('Customer', CustomerSchema);
+const Customer = mongoose.model('Customer', CustomerSchema);
 
-module.exports = CustomerModel;
+module.exports = Customer;
 
 
 
