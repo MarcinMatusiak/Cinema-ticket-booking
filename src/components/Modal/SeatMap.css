@@ -1,0 +1,61 @@
+h1 {
+  text-align: center;
+  color: black;
+}
+
+.container {
+  width: 600px;
+  margin: auto;
+}
+
+.grid td {
+  width: 80px;
+  height: 50px;
+  padding: 10px 10px;
+  border: 1px solid orange;
+  text-align: center;
+  float: left;
+  margin: 2px;
+}
+
+.grid td:hover {
+  opacity: .7;
+  cursor: pointer;
+}
+
+.reserved {
+  background: orange;
+  color: #fff;
+  display: inline-block;
+}
+
+.reserved::after {
+  content: 'ZAJĘTE'
+}
+
+.available::after {
+  content: 'WOLNE'
+}
+
+.available {
+  color: #333;
+}
+
+li {
+  list-style: none;
+  color: black;
+}
+
+.left {
+  float: left;
+  overflow: auto;
+  max-height: 15rem;
+  color: black;
+}
+
+.right {
+  float: right;
+  overflow: auto;
+  max-height: 15rem;
+  color: black;
+}
