@@ -2,6 +2,9 @@ import React from 'react';
 import './SeatMap.css';
 
 export default class DrawGrid extends React.Component {
+   onClickSeat(seat) {
+     this.props.onClickData(seat);
+   }
   render() {
     return (
        <div className="container">
@@ -20,10 +23,6 @@ export default class DrawGrid extends React.Component {
         <ReservedList reserved = { this.props.reserved } />
        </div>
     )
-  }
-  
-  onClickSeat(seat) {
-    this.props.onClickData(seat);
   }
 }
 

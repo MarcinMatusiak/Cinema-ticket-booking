@@ -34,12 +34,12 @@ const footerStyle = {
     top: 30
 };
 
-const button1Style = {
+const submitButtonStyle = {
     backgroundColor: 'red',
     left: 20
 }
 
-const button2Style = {
+const closeButtonStyle = {
     top: 5,
     right: 20
 }
@@ -51,21 +51,20 @@ export default class Modal extends React.Component {
         this.props.onClose && this.props.onClose(e);
     }
     render(){
-        if(!this.props.show) {
-            return null;
-        }
-        return (
-            <div style={backdropStyle}>
-                <div style={modalStyle}>
-                    {this.props.children}
-                    <div style = {footerStyle}>
-                        <button onClick={this.onClose} style={button1Style}>
-                            X
-                        </button>
+        return(
+            !this.props.show ? null : (
+                <div style={backdropStyle}>
+                    <div style={modalStyle}>
+                        {this.props.children}
+                        <div style = {footerStyle}>
+                            <button onClick={this.onClose} style={submitButtonStyle}>
+                                X
+                            </button>
+                        </div>
+                        <div><button style={closeButtonStyle}>Zatwierdź</button></div>
                     </div>
-                    <div><button style={button2Style}>Zatwierdź</button></div>
                 </div>
-            </div>
+            )
         )
     }
 }

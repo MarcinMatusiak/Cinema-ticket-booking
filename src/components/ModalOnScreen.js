@@ -27,10 +27,7 @@ class ModalOnScreen extends React.Component {
 	 };
 
 	showModal = () => {
-		this.setState({
-			...this.state,
-			show: !this.state.show
-		})
+		this.setState({show: !this.state.show})
 	}
 
 	onClickData(seat) {
